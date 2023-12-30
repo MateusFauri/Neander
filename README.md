@@ -2,14 +2,8 @@
 
 <p>Arquitetura Utilizada para realização deste Trabalho</p>
 <div align="center">
-
-  ![Neander](https://github.com/MateusFauri/Neander/assets/62532715/8253e51e-f6c3-4423-a408-a3e564938b42)
-</div>
-
-<p>Maquina de Estados criada para a parte do Controle do Neander</p>
-<div align="center">
   
-![Maquina  de Estados](https://github.com/MateusFauri/Neander/assets/62532715/fabbe4c8-6833-48b4-8e3f-7b8ea9dcc3c1)
+![Arquitetura Neander](https://github.com/MateusFauri/Neander/assets/62532715/3a907944-9174-470c-94d2-b6943b85392c)
 
 </div>
 
@@ -38,7 +32,6 @@ Código|Instrução|Operação
   * Contador de programa (PC) de 8 bits
   * Registrador de instrução (RI) de 4 bits
   * Registrador de endereços de memoria (REM) de 8 bits
-  * Registrador de dados de memoria (RDM) de 8 bits
 * Flip_flops
   * N 
     * Caso a ultima operação realizada na ula der Negativo
@@ -93,32 +86,6 @@ org 128
     y: db 3
     resultado: db 0
     um: db 1
-```
-
-<p>Possivel arquivo .coe para a memoria Bram</p>
-
-```
-header memory_initialization_radix = 2;
-memory_initialization_vector =  
-0010000010000001,
-1010000000011001,
-0010000011111111,           
-0010000010000010,
-0011000010000000,
-0001000010000010,
-0010000010000011,
-01100000,
-0011000010000011,                  
-0011000010000001,                
-1010000000011001,       
-0001000010000001,                 
-1000000000000110,
-11110000,
-
-1000000000000101,
-1000000100000011,
-1000001000000000,
-1000001100000001;
 ```
 
 ## Informações Adicionais
