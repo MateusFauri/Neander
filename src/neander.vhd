@@ -243,7 +243,11 @@ begin
                 proximoEstado <= E5;
 
             when E5 =>
-                if (instrucaoDecodificada(1) = '1' or instrucaoDecodificada(2) = '1' or instrucaoDecodificada(3) = '1' or instrucaoDecodificada(4) = '1'or instrucaoDecodificada(5) = '1') then
+                if instrucaoDecodificada(1) = '1' then
+                    selMuxPc <= '1';
+                    cargaRem <= '1';
+                    proximoEstado <= W6;
+                if (instrucaoDecodificada(2) = '1' or instrucaoDecodificada(3) = '1' or instrucaoDecodificada(4) = '1'or instrucaoDecodificada(5) = '1') then
                     selMuxPc <= '1';
                     cargaRem <= '1';
                     proximoEstado <= E6;
@@ -255,9 +259,6 @@ begin
 
             when E6 =>
                 writeA <= "0";
-                if (instrucaoDecodificada(2) = '1' or instrucaoDecodificada(3) = '1' or instrucaoDecodificada(4) = '1'or instrucaoDecodificada(5) = '1') then
-                elsif instrucaoDecodificada(1) = '1' then
-                end if;
                 proximoEstado <= W6;
 
             when W6 =>
