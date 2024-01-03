@@ -71,7 +71,7 @@ architecture behav of neander is
 			dp 				: out 	STD_LOGIC);
     end component;
 
-    type estados is (E0, E1,W1, E2, E3, E4,W4, E5, E6, W6, E7, FF);
+    type estados is (E0, E1,W1, E2, E3, E4,W4, E5, E6, W6, E7, W7, FF);
     signal estado  : estados;
     signal proximoEstado : estados;
 
@@ -277,12 +277,15 @@ begin
                 end if;
 
                 if instrucaoDecodificada(1) = '1' then  
-                    proximoEstado <= E0;
+                    proximoEstado <= W7;
                 else
                     cargaAc <= '1';
                     cargaNZ <= '1';
                     proximoEstado <= E0;
                 end if;
+            
+            when W7 =>
+                proximoEstado <= E0;
 
             when FF =>
                 proximoEstado <= FF;
