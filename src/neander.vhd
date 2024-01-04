@@ -247,7 +247,7 @@ begin
                     selMuxPc <= '1';
                     cargaRem <= '1';
                     proximoEstado <= W6;
-                if (instrucaoDecodificada(2) = '1' or instrucaoDecodificada(3) = '1' or instrucaoDecodificada(4) = '1'or instrucaoDecodificada(5) = '1') then
+                elsif (instrucaoDecodificada(2) = '1' or instrucaoDecodificada(3) = '1' or instrucaoDecodificada(4) = '1'or instrucaoDecodificada(5) = '1') then
                     selMuxPc <= '1';
                     cargaRem <= '1';
                     proximoEstado <= E6;

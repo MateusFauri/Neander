@@ -66,7 +66,6 @@ Código|Instrução|Operação
 org 0
     LDA     y
     JZ      FIMDOPROGRAMA
-    LDA	    255              
 INICIO:
     LDA	    resultado
     ADD     x
